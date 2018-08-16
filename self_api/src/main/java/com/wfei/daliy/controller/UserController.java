@@ -20,6 +20,7 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
     Logger logger = LoggerFactory.getLogger(UserController.class);
     @Resource
     EventListenerManger eventListenerManger;
