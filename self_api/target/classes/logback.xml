@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOG_NAME" values="${catalina.home}/logs"/>
+    <appender name="alllog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_NAME}/api.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>${LOG_HOME}/history/%d{yyyyMM,aux}/api.log.%d{yyyyMMdd}</fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{15} %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}[%thread] %-5level %logger.%M:%L ** %msg%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="com.wfei.daliy" level="info" additivity="false">
+        <appender-ref ref="alllog"/>
+    </logger>
+    <logger name="com.wfei.daliy" level="info" additivity="false">
+        <appender-ref ref="stdout"/>
+    </logger>
+    <root level="info">
+        <appender-ref ref="stdout"/>
+    </root>
+</configuration>

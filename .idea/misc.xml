@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/aa" />
+    <file type="web" url="file://$PROJECT_DIR$/hhh" />
+    <file type="web" url="file://$PROJECT_DIR$/self_api" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/self_core/pom.xml" />
+        <option value="$PROJECT_DIR$/self_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/self_base/pom.xml" />
+        <option value="$PROJECT_DIR$/self_api/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

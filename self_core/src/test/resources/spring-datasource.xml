@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="selfMysql" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <constructor-arg index="0" ref="selfMysqlconfig" />
+    </bean>
+    <bean id="selfMysqlconfig" class="com.zaxxer.hikari.HikariConfig">
+        <property name="driverClassName" value="${jdbc.driver.class.name}" />
+        <property name="jdbcUrl" value="${wfei.mysql.jdbc.url}" />
+        <property name="username" value="${wfei.mysql.jdbc.username}" />
+        <property name="password" value="${wfei.mysql.jdbc.password}" />
+        <property name="autoCommit" value="${wfei.mysql.jdbc.autoCommit}" />
+        <property name="connectionTimeout" value="${wfei.mysql.jdbc.connectionTimeout}" />
+        <property name="maximumPoolSize" value="${wfei.mysql.jdbc.maximumPoolSize}" />
+        <property name="minimumIdle" value="${wfei.mysql.jdbc.minimumIdle}" />
+        <property name="registerMbeans" value="${wfei.mysql.jdbc.registerMbeans}" />
+    </bean>
+    <bean id="selfFactory" class="org.jfaster.mango.datasource.SimpleDataSourceFactory">
+        <property name="name" value="${wfei.mysql.name}"/>
+       <property name="dataSource" ref="selfMysql"/>
+    </bean>
+    <!--mango配置 start-->
+    <bean id="mango" class="org.jfaster.mango.operator.Mango" factory-method="newInstance">
+        <property name="dataSourceFactories">
+            <list>
+                <ref bean="selfFactory" />
+            </list>
+        </property>
+    </bean>
+    <!--mango配置 end-->
+</beans>
