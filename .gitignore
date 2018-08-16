@@ -7,7 +7,7 @@
 *.log
 logs/
 catalina.home_IS_UNDEFINED/
-
+.idea/
 # BlueJ files
 *.ctxt
 
