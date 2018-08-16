@@ -4,7 +4,9 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f8360fd-2b84-49d3-8cfd-364c382713b5" name="Default" comment="" />
+    <list default="true" id="9f8360fd-2b84-49d3-8cfd-364c382713b5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/self_core/target/" />
     <ignored path="$PROJECT_DIR$/self_parent/target/" />
     <ignored path="$PROJECT_DIR$/self_base/target/" />
@@ -906,7 +908,7 @@
       <workItem from="1529494609713" duration="597000" />
       <workItem from="1529571965644" duration="1222000" />
       <workItem from="1534335253245" duration="1300000" />
-      <workItem from="1534399941681" duration="304000" />
+      <workItem from="1534399941681" duration="660000" />
     </task>
     <servers />
   </component>
@@ -943,7 +945,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126772000" />
+    <option name="totallyTimeSpent" value="127128000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
