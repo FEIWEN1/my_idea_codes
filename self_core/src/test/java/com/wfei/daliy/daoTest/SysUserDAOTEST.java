@@ -16,13 +16,13 @@ import javax.annotation.Resource;
  */
 public class SysUserDAOTEST extends BaseTest{
 
-    @Autowired
-    private UserDao userDao;
+//    @Autowired
+//    private UserDao userDao;
 
     @Test
     public void getUser(){
-        SysUser sysUser=userDao.getUser("lisi");
-        SpringBeanUtil.getBeanByName("lisi");
+//        SysUser sysUser=userDao.getUser("lisi");
+//        SpringBeanUtil.getBeanByName("lisi");
 
     }
 
