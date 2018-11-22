@@ -19,7 +19,7 @@ public class DemoDAOTest extends BaseTest {
     @Test
     public void getDemo() throws Exception {
         List<Demo> list=demoDAO.getDemo();
-        logger.info("查询demo列表：{}",list.get(1));
+//        logger.info("查询demo列表：{}",list.get(1));
     }
 
 }
