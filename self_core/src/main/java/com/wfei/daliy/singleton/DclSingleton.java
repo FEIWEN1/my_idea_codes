@@ -7,6 +7,9 @@ package com.wfei.daliy.singleton;
  */
 public class DclSingleton {
 
+    /**
+     * 保证变量的可见性
+     */
     private static volatile DclSingleton dclSingleton = null;
 
     private DclSingleton() {

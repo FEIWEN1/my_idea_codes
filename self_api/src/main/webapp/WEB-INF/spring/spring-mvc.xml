@@ -26,5 +26,9 @@
             <mvc:mapping path="/**"/>
             <bean class="com.wfei.daliy.common.spring.TraceLogInterceptor"/>
         </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.wfei.daliy.common.spring.PerformanceInterceptor"/>
+        </mvc:interceptor>
     </mvc:interceptors>
 </beans>
