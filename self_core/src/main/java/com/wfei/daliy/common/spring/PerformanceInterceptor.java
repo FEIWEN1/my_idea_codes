@@ -2,6 +2,8 @@ package com.wfei.daliy.common.spring;
 
 import org.perf4j.StopWatch;
 import org.perf4j.slf4j.Slf4JStopWatch;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,8 +17,14 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class PerformanceInterceptor extends HandlerInterceptorAdapter {
 
+    private ThreadLocal<StopWatch> local = new ThreadLocal<>();
+    private Logger logger = LoggerFactory.getLogger(PerformanceInterceptor.class);
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
+        StopWatch stopWatch = new Slf4JStopWatch("shell");
+        stopWatch.start();
+        local.set(stopWatch);
         return false;
     }
 
@@ -24,18 +32,11 @@ public class PerformanceInterceptor extends HandlerInterceptorAdapter {
     public void afterCompletion(
             HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
             throws Exception {
-    }
-
-    public static void main(String[] args) {
-        StopWatch stopWatch=new Slf4JStopWatch("shell");
-        stopWatch.start();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        StopWatch stopWatch = local.get();
         stopWatch.stop();
-        System.out.println(stopWatch.getElapsedTime());
+        Long elapsedTime = stopWatch.getElapsedTime();
+        String url = request.getRequestURI();
+        logger.info("API接口{},耗时{}", url, elapsedTime);
     }
 
 }

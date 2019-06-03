@@ -15,12 +15,13 @@ public class ok {
         driverList.add("3");
         List<String> subList=driverList.subList(0,1);
         driverList.add("s");
+        System.out.println("ssssss");
         //遍历
 //        System.out.println(subList);
         //增加
 //        subList.add("s");
         //删除
-        subList.remove(0);
+//        subList.remove(0);
         //        for(String a:driverList){
 //            System.out.println(a);
 //        }
