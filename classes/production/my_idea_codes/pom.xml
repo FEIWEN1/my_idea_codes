@@ -27,7 +27,7 @@
     <hikaricp.version>2.4.12</hikaricp.version>
     <mysql-connectior-java.version>5.1.25</mysql-connectior-java.version>
     <sq.redis.version>1.0.4</sq.redis.version>
-    <fastjson.version>1.2.31</fastjson.version>
+    <fastjson.version>1.2.7</fastjson.version>
     <httpclient.version>4.5.1</httpclient.version>
     <httpclient.common.version>3.1</httpclient.common.version>
     <lombok.version>1.16.16</lombok.version>
