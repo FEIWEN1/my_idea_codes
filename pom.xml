@@ -34,7 +34,7 @@
     <apache.commons.lang3.version>3.3.2</apache.commons.lang3.version>
     <apache.commons.collections.version>3.2.2</apache.commons.collections.version>
     <guava.version>18.0</guava.version>
-    <jackson.version>2.6.3</jackson.version>
+    <jackson.version>2.9.10.4</jackson.version>
     <geronimo-jms_1.1_spec.version>1.1.1</geronimo-jms_1.1_spec.version>
     <pinyin4j.version>2.5.0</pinyin4j.version>
     <rocketmq-client.version>3.4.6</rocketmq-client.version>
