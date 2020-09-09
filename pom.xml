@@ -43,7 +43,7 @@
     <json-lib.version>2.4</json-lib.version>
     <xom.version>1.2.5</xom.version>
     <validation-api.version>1.1.0.Final</validation-api.version>
-    <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
+    <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
     <activemq-core.version>5.7.0</activemq-core.version>
     <activemq.version>5.9.1</activemq.version>
     <aspectjweaver.version>1.8.9</aspectjweaver.version>
