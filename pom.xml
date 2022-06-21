@@ -49,7 +49,7 @@
     <aspectjweaver.version>1.8.9</aspectjweaver.version>
     <joda.time.version>2.9.9</joda.time.version>
     <org.jfaster.mango.version>1.5.3</org.jfaster.mango.version>
-    <mysql.version>5.1.29</mysql.version>
+    <mysql.version>8.0.28</mysql.version>
     <com.zaxxer.hikaricp.version>2.5.1</com.zaxxer.hikaricp.version>
     <apache.commons.collections4.version>4.1</apache.commons.collections4.version>
     <kafka.version>2.0.0</kafka.version>
