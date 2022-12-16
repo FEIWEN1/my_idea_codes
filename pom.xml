@@ -19,7 +19,7 @@
     <skip_maven_deploy>false</skip_maven_deploy>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <skip_maven_deploy>false</skip_maven_deploy>
-    <spring.version>4.2.4.RELEASE</spring.version>
+    <spring.version>5.2.20.RELEASE</spring.version>
     <logback.version>1.2.3</logback.version>
     <slf4j.api.version>1.7.9</slf4j.api.version>
     <perf4j.version>0.9.16</perf4j.version>
